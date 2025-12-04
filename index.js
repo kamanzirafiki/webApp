@@ -1,11 +1,12 @@
-const http = require('http'); // 1. Import the built-in 'http' module
+const http = require('http');
 
-const hostname = '127.0.0.1'; // The loopback address (localhost)
-const port = 3000; // The port the server will listen on
+const hostname = '127.0.0.1';
+const port = 3000;
 
-// 2. Create the server
+// Create the server
 const server = http.createServer((req, res) => {
 
+  // NEW ROUTE for /about
   // NEW FEATURE (Required for the assignment)
   if (req.url === '/about') {
     res.statusCode = 200;
@@ -20,7 +21,7 @@ const server = http.createServer((req, res) => {
   res.end('Hello! My first Web server is running.');
 });
 
-// 3. Start the server
+// Start the server
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
