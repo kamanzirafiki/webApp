@@ -5,9 +5,7 @@ const port = 3000;
 
 // Create the server
 const server = http.createServer((req, res) => {
-
-  // NEW ROUTE for /about
-  // NEW FEATURE (Required for the assignment)
+  // Route for /about
   if (req.url === '/about') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -15,7 +13,7 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Default response
+  // Default route
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello! My first Web server is running.');
