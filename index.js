@@ -7,6 +7,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
 
   // NEW ROUTE for /about
+  // NEW FEATURE (Required for the assignment)
   if (req.url === '/about') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
